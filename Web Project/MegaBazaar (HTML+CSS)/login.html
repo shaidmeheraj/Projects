@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - MegaBazaar</title>
+    <style>
+        /* Reset default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Body styling */
+        body {
+            background: #f4f4f4;
+            color: #333;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background: #007BFF;
+            padding: 15px 0;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 10px 20px;
+            display: inline-block;
+            transition: background 0.3s ease;
+        }
+
+        nav a:hover {
+            background: #0056b3;
+            border-radius: 5px;
+        }
+
+        /* Container */
+        .container {
+            max-width: 400px;
+            margin: 50px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: left;
+        }
+
+        h1 {
+            font-size: 28px;
+            color: #007BFF;
+            text-align: center;
+        }
+
+        /* Form Styling */
+        form {
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            font-size: 16px;
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        /* Remember Me Checkbox */
+        label input[type="checkbox"] {
+            width: auto;
+            margin-right: 5px;
+        }
+
+        /* Buttons & Links */
+        button {
+            width: 100%;
+            background: #007BFF;
+            color: white;
+            border: none;
+            padding: 12px;
+            font-size: 16px;
+            font-weight: bold;
+            margin-top: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+
+        button:hover {
+            background: #0056b3;
+            transform: scale(1.05);
+        }
+
+        button:active {
+            transform: scale(0.95);
+        }
+
+        p {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #007BFF;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+                padding: 15px;
+            }
+
+            button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+    </nav>
+
+    <div class="container">
+        <h1>Login</h1>
+        <form>
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" required>
+
+            <label>
+                <input type="checkbox" id="remember-me"> Remember Me
+            </label>
+
+            <button type="submit">Login</button>
+
+            <p><a href="forgot-password.html">Forgot Password?</a></p>
+            <p>Don't have an account? <a href="register.html">Register here</a></p>
+        </form>
+    </div>
+</body>
+</html>

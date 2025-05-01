@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - MegaBazaar</title>
+    <style>
+        /* Reset styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Body Styling */
+        body {
+            background: #f4f4f4;
+            color: #333;
+            padding: 20px;
+        }
+
+        /* Navigation */
+        nav {
+            background: #007BFF;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 18px;
+            padding: 10px 20px;
+            margin: 0 10px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        nav a:hover {
+            background: #0056b3;
+            border-radius: 5px;
+        }
+
+        /* Product List */
+        .product-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1000px;
+            margin: 40px auto;
+        }
+
+        .product {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .product:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .product img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .product h2 {
+            font-size: 20px;
+            margin-top: 15px;
+        }
+
+        .product p {
+            font-size: 16px;
+            color: #555;
+            margin: 10px 0;
+        }
+
+        .product a {
+            display: inline-block;
+            text-decoration: none;
+            padding: 10px 15px;
+            background: #28a745;
+            color: white;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 10px;
+            transition: background 0.3s;
+        }
+
+        .product a:hover {
+            background: #218838;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+    </nav>
+
+    <h1>Our Products</h1>
+    <div class="product-list">
+        <div class="product">
+            <img src="product1.jpg" alt="Product 1">
+            <h2>Product 1</h2>
+            <p>Price: $100</p>
+            <a href="product-details.html?id=1">View Details</a>
+        </div>
+        <div class="product">
+            <img src="product2.jpg" alt="Product 2">
+            <h2>Product 2</h2>
+            <p>Price: $150</p>
+            <a href="product-details.html?id=2">View Details</a>
+        </div>
+        <div class="product">
+            <img src="product3.jpg" alt="Product 3">
+            <h2>Product 3</h2>
+            <p>Price: $200</p>
+            <a href="product-details.html?id=3">View Details</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - MegaBazaar</title>
+    <style>
+        /* Reset default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Body styling */
+        body {
+            background: #f4f4f4;
+            color: #333;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background: #007BFF;
+            padding: 15px 0;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 10px 20px;
+            display: inline-block;
+            transition: background 0.3s ease;
+        }
+
+        nav a:hover {
+            background: #0056b3;
+            border-radius: 5px;
+        }
+
+        /* Container */
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            font-size: 32px;
+            color: #007BFF;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-top: 20px;
+            color: #333;
+            border-bottom: 2px solid #007BFF;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        p {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        /* Buttons */
+        button {
+            background: #007BFF;
+            color: white;
+            border: none;
+            padding: 12px 18px;
+            font-size: 16px;
+            font-weight: bold;
+            margin: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+
+        button:hover {
+            background: #0056b3;
+            transform: scale(1.05);
+        }
+
+        button:active {
+            transform: scale(0.95);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+                padding: 15px;
+            }
+
+            button {
+                width: 100%;
+                margin: 5px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+    </nav>
+    
+    <div class="container">
+        <h1>Admin Dashboard</h1>
+        <p>Manage products and orders.</p>
+
+        <h2>Product Management</h2>
+        <button>Add Product</button>
+        <button>Edit Product</button>
+        <button>Delete Product</button>
+
+        <h2>Order Management</h2>
+        <button>View Orders</button>
+        <button>Update Order Status</button>
+
+        <h2>User Management</h2>
+        <button>View Users</button>
+        <button>Remove User</button>
+
+        <h2>Analytics</h2>
+        <p>View sales reports and user activity.</p>
+    </div>
+</body>
+</html>
