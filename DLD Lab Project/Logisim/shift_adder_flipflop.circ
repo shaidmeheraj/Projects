@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project source="3.9.0" version="1.0">
+  <lib desc="#Wiring" name="0"/>
+  <lib desc="#Gates" name="1"/>
+  <lib desc="#Plexers" name="2"/>
+  <lib desc="#Arithmetic" name="3"/>
+  <lib desc="#Memory" name="4"/>
+  <lib desc="#I/O" name="5"/>
+  <lib desc="#Base" name="6"/>
+  <main name="main"/>
+  <circuit name="main">
+
+    <!-- Shift Register 1 -->
+    <comp lib="4" name="Shift Register" loc="(100,100)">
+      <a name="width" val="8"/>
+      <a name="appearance" val="narrow"/>
+      <a name="label" val="ShiftReg1"/>
+    </comp>
+
+    <!-- Shift Register 2 -->
+    <comp lib="4" name="Shift Register" loc="(100,200)">
+      <a name="width" val="8"/>
+      <a name="appearance" val="narrow"/>
+      <a name="label" val="ShiftReg2"/>
+    </comp>
+
+    <!-- Full Adder (1-bit using logic gates) -->
+    <!-- Inputs A, B, Cin -->
+    <comp lib="0" name="Pin" loc="(300,100)">
+      <a name="label" val="A"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" name="Pin" loc="(300,130)">
+      <a name="label" val="B"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" name="Pin" loc="(300,160)">
+      <a name="label" val="Cin"/>
+      <a name="output" val="true"/>
+    </comp>
+
+    <!-- XOR gates for sum -->
+    <comp lib="1" name="XOR Gate" loc="(350,115)"/>
+    <comp lib="1" name="XOR Gate" loc="(400,130)"/>
+
+    <!-- AND gates for carry -->
+    <comp lib="1" name="AND Gate" loc="(350,170)"/>
+    <comp lib="1" name="AND Gate" loc="(350,200)"/>
+    <comp lib="1" name="AND Gate" loc="(350,230)"/>
+    <comp lib="1" name="OR Gate" loc="(400,200)"/>
+    <comp lib="1" name="OR Gate" loc="(450,200)"/>
+
+    <!-- D Flip-Flop -->
+    <comp lib="4" name="D Flip-Flop" loc="(600,130)">
+      <a name="label" val="DFF"/>
+    </comp>
+
+    <!-- Output LEDs -->
+    <comp lib="5" name="LED" loc="(500,130)">
+      <a name="label" val="Sum"/>
+    </comp>
+    <comp lib="5" name="LED" loc="(500,200)">
+      <a name="label" val="Cout"/>
+    </comp>
+
+    <!-- Wiring for Full Adder -->
+    <wire from="(300,100)" to="(340,115)"/>
+    <wire from="(300,130)" to="(340,115)"/>
+    <wire from="(360,115)" to="(390,130)"/>
+    <wire from="(300,160)" to="(390,130)"/>
+    <wire from="(410,130)" to="(500,130)"/>
+    <wire from="(300,100)" to="(340,170)"/>
+    <wire from="(300,130)" to="(340,200)"/>
+    <wire from="(300,160)" to="(340,230)"/>
+    <wire from="(360,170)" to="(390,200)"/>
+    <wire from="(360,200)" to="(390,200)"/>
+    <wire from="(360,230)" to="(390,200)"/>
+    <wire from="(410,200)" to="(440,200)"/>
+    <wire from="(440,200)" to="(500,200)"/>
+
+    <!-- Connect Sum to D Flip-Flop input -->
+    <wire from="(500,130)" to="(590,130)"/>
+    <!-- Connect Q output of Flip-Flop to LED -->
+    <wire from="(610,130)" to="(640,130)"/>
+    <comp lib="5" name="LED" loc="(640,130)">
+      <a name="label" val="Q Output"/>
+    </comp>
+  </circuit>
+</project>
